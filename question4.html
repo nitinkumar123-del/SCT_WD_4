@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar Chart - Population Distribution</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chart-container {
+            width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chart-container">
+    <h2>Gender Distribution</h2>
+    <canvas id="barChart"></canvas>
+</div>
+
+<script>
+    const ctx = document.getElementById('barChart').getContext('2d');
+
+    const barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Male', 'Female', 'Other'],
+            datasets: [{
+                label: 'Number of People',
+                data: [60, 35, 5],   // Sample Dataset
+                backgroundColor: [
+                    '#4e73df',
+                    '#e74a3b',
+                    '#1cc88a'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
