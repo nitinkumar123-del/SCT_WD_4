@@ -1,1 +1,1 @@
-in this project a bar chart is created using HTML,CSS,and jJAVA SRIPT to visualize the distribution of a population . the chart represents categorial data such as gender distribution 
+in this project a bar chart is created using HTML,CSS,and JAVA SRIPT to visualize the distribution of a population . the chart represents categorial data such as gender distribution ths visualisation helps in understanding how data is distributed across different categoris in a simple and effective way
